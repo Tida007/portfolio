@@ -1,6 +1,6 @@
 import React from "react";
 import { FaCode, FaUsers, FaLightbulb, FaRocket, FaBriefcase, FaGraduationCap, FaAward } from "react-icons/fa";
-import { DiAppstore } from "react-icons/di";
+import SkillsSection from "../components/SkillsSection";
 
 
 const Section = ({ title, description,  children, align = "center" })  =>(
@@ -111,12 +111,7 @@ function About ()  {
       </Section>
 
       {/* Tools Section */}
-      <Section 
-      title="Technical Expertise"
-      description="I've developed a diverse skill set across frontend, allowing me to build complete, scalable applications from concept to development."
-      >
-        <div></div>
-      </Section>
+      <SkillsSection Portfolio={Section} />
     </>
   );
 }
