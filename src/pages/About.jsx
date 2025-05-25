@@ -1,6 +1,12 @@
 import React from "react";
 import { FaCode, FaUsers, FaLightbulb, FaRocket, FaBriefcase, FaGraduationCap, FaAward } from "react-icons/fa";
 import SkillsSection from "../components/SkillsSection";
+import ProjectGrid from "../components/Project";
+import { PiGithubLogo } from "react-icons/pi";
+import { LuLinkedin } from "react-icons/lu";
+import { MdOutlineArrowOutward } from "react-icons/md";
+import { MdOutlineAttachEmail } from "react-icons/md";
+import Footer from "../components/Footer";
 
 
 const Section = ({ title, description,  children, align = "center" })  =>(
@@ -97,10 +103,10 @@ function About ()  {
           <div>
             <h2 className="text-2xl font-bold text-gray-300 mb-4 flex items-center">
               <FaGraduationCap className="text-blue-500 mr-2"/>
-              Education
+              BootCamp
             </h2>
             <div className="border border-gray-600 p-4 rounded-lg">
-              <h3 className="font-bold text-gray-300">Engineering Degree in Computer Science</h3>
+              <h3 className="font-bold text-gray-300">New Horizon (ICT)</h3>
               <p className="text-gray-400 text-sm mt-2">
                 <span className="text-blue-400">Higher School of Computer Science and Digital Technologies (ESTIN)</span>
                 <span className="bg-zinc-800 text-gray-400 text-xs px-2 py-1 rounded">2022 - Present</span>
@@ -112,6 +118,73 @@ function About ()  {
 
       {/* Tools Section */}
       <SkillsSection Portfolio={Section} />
+
+      {/* Projects Link */}
+      <Section
+      title={"Featured Projects"}
+      description={"Exiting project i currently deployed. check back soon my portfolio of full stack applications that demonstrate my techanical skills and problem-solving abilities"}
+      >
+      </Section>
+
+      <ProjectGrid />
+      <Section
+      description={"I am always looking for new opportunities to collaborate on exciting projects. If you have a project in mind or want to discuss potential collaborations, feel free to reach out!"}
+      className="text-center text-xs"
+      >
+        <div className="flex justify-center items-center mt-6">
+          <a 
+          href=""
+          className="flex items-center px-4 py-2 bg-fuchsia-400 text-white rounded-full hover:bg-fuchsia-600 transition duration-300 ease-in-out"
+          >
+            <PiGithubLogo className="mr-2 text-xs" />
+            View GitHhub Respositories
+          </a>
+        </div>
+      </Section>
+
+      <Section
+      title={"Let's Connect!"}
+      description={"Have a project in mind or want to discuss potential opportunities? Feel free to reach out through any of these channels!"}
+      className={"bg-amber-950"}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-3xl h-36">
+          <SkillCard icon={MdOutlineAttachEmail} title={"Email"} description={
+            <>
+            For direct inquiries and collaborations  <br />
+            <a
+             href="mailto:tonytidatmg@gmail.com"
+             target="_blank"
+            className="text-blue-400 hover:underline"
+            >tonytidatmg@gmail.com</a>
+            </>
+            } 
+             />
+        <SkillCard icon={PiGithubLogo} title={"GitHub"} description={
+          <>
+          Check out my open source work <br />
+          <a href="https://github.com/Tida007"
+           rel="noopener noreferral" 
+           target="#"
+           className="text-blue-400 hover:underline flex gap-2"
+           >View Projects <MdOutlineArrowOutward size={18}/></a>
+          </>
+           }  
+           />
+        <SkillCard icon={LuLinkedin} title={"LinkedIn"} description={
+          <>
+          Connect with me professionally <br />
+          <a href="https://www.linkedin.com/in/walter-francis-a24333365/"
+          rel="noopener noreferrer"
+          target="#"
+          className="text-blue-400 hover:underline flex gap-2"
+          >View Profile <MdOutlineArrowOutward size={18}/></a>
+          </>
+          } 
+          />
+        </div>
+      </Section>
+
+      <Footer />
     </>
   );
 }
