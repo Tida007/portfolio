@@ -38,7 +38,7 @@ function NavBar() {
     };
 
     return (
-        <nav className="flex items-center justify-between px-6 py-4 bg-gray-800 text-white">
+        <nav className="flex place-items-end justify-between px-6 py-4  text-white">
             <div className="flex items-center space-x-4">
                 {/* Logo Section*/}
                 <DiAndroid className="text-4xl text-violet-200" />
@@ -47,9 +47,9 @@ function NavBar() {
 
             {/* Navigation Links */}
             <div className="flex space-x-4">
-                <Link to="/" className="hover:text-gray-400">Home</Link>
-                <Link to="/about" className="">About</Link>
-                <Link to="/contact">Contact</Link>
+                <Link to="/" className="hover:text-blue-500">Home</Link>
+                <Link to="/about" className="hover:text-blue-500">About</Link>
+                <Link to="/contact" className="hover:text-blue-500">Contact</Link>
             </div>
 
             <div>

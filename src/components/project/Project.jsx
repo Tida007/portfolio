@@ -29,7 +29,6 @@ const projects = [
 ];
 
 const ProjectGrid = () => (
-  <div data-state="active" data-orientation="horizontal" role="tabpanel"  tabIndex="0" className="ring-offset-background focus-visible:outline-none focus-visible:ring-ring focus-visible:ring-offset-2 mt-8" style="animation-duration: 0s;">
   <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
     {projects.map((project, idx) => (
       <div
@@ -68,7 +67,6 @@ const ProjectGrid = () => (
       </div>
     ))}
   </div>
-    </div>
 );
 
 export default ProjectGrid;
