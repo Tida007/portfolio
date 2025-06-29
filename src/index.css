@@ -17,4 +17,11 @@
 /* Apply the font globally */
 body {
     font-family: "Inter",  sans-serif;
+    background-color: black; /* Dark mode background */
+    color: antiquewhite; /* Light text color for better contrast */
+
+}
+
+:root{
+    --primary-color: #fdc448;
 }

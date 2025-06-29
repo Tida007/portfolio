@@ -1,10 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { DiAndroid } from "react-icons/di";
 import iconMoon from "/images/icon-moon.svg";
 import iconSun from "/images/icon-sun.svg";
+import { AlignRight, Rotate3D } from "lucide-react";
+import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import Navcss from "./NavBar.module.css";
 
 function NavBar() {
+
+    const menu = useRef();
+
+    const menuHandler = () => {
+        menu.current.classList.toggle(Navcss.showMenu);
+    }
 
     const [theme, setTheme] = useState("dark");
 
@@ -39,18 +47,57 @@ function NavBar() {
 
     return (
         <nav className="flex place-items-end justify-between px-6 py-4  text-white">
-            <div className="flex items-center space-x-4">
-                {/* Logo Section*/}
-                <DiAndroid className="text-4xl text-violet-200" />
-                <h1 className="text-shadow-violet-200 font-black">Tida</h1>
-            </div>
+           <div className={Navcss.logo}>
+            <Rotate3D size={40}/>
+           </div>
 
             {/* Navigation Links */}
-            <div className="flex space-x-4">
-                <Link to="/" className="hover:text-blue-500">Home</Link>
-                <Link to="/about" className="hover:text-blue-500">About</Link>
-                <Link to="/contact" className="hover:text-blue-500">Contact</Link>
-            </div>
+          <ul ref={menu} className={`${Navcss.menu}`}>
+            <li className=" hover:font-extrabold hover:text-white duration-300">
+                <Link to="/">Home</Link>
+            </li>
+            <li className=" hover:font-extrabold hover:text-white duration-300">
+                <Link to="/about">About</Link>
+            </li>
+            <li className=" hover:font-extrabold hover:text-white duration-300">
+                <Link to="/projects">Projects</Link>
+            </li>
+          </ul>
+
+          { /* Social Media Icons */}
+          <div className={Navcss.navBtns}>
+        <div className={'Navcss.social flex gap-2'}>
+          <a
+            href="https://github.com/Tida007"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:bg-transparent"
+          >
+            <FaGithub size={28} className={'Navcss.icon rounded-full text-amber-300'} />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/walter-francis-a24333365/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={28} className={'Navcss.icon rounded-full text-amber-300'} />
+          </a>
+
+          <a
+            href="https://discord.com/chanels/@me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaDiscord size={28} className={'Navcss.icon rounded-full text-amber-300'} />
+          </a>
+        </div>
+
+        <div className={Navcss.bars} onClick={menuHandler}>
+          {/* Hamburger Menu Icon */}
+            <AlignRight size={30} className="text-amber-300" />
+        </div>
+      </div>
 
             <div>
                 <button

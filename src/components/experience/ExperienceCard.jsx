@@ -30,7 +30,7 @@ function ExperienceSection() {
         "My professional journey has equipped me with practical experience and valuable skills in software development."
       }
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-36 items-center">
         <div>
           <h2 className="text-2xl font-bold text-gray-300 mb-8 flex items-center">
             <FaBriefcase className="text-blue-500 mr-2" />
@@ -39,10 +39,10 @@ function ExperienceSection() {
           <div className="relative border-l border-gray-600 pl-4">
             <ExperienceCard
               title="Freelance Developer"
-              company="Fiverr"
-              duration={"4.8 on Fiverr"}
+              company="Upwork"
+              duration={"4.8 on Upwork"}
               description={
-                "Developing custom web applications  & websites for clients worldwide. Maintaining a high satisfaction rate withclients through effective communication ."
+                "Developing custom web applications  & projects for clients worldwide. Maintaining a high satisfaction rate with clients through effective communication ."
               }
               skills={["React", "Node.js", "JavaScript", "HTML", "TailwindCSS"]}
             />
@@ -69,7 +69,7 @@ function ExperienceSection() {
             <FaGraduationCap className="text-blue-500 mr-2" />
             BootCamp
           </h2>
-          <div className="border border-gray-600 p-4 rounded-lg">
+          <div className="shadow-2xl border-0 w-1xl p-4 rounded-lg">
             <h3 className="font-bold text-gray-300">New Horizon (ICT)</h3>
             <p className="text-gray-400 text-sm mt-2">
               <span className="text-blue-400">

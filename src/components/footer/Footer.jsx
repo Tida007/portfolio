@@ -10,33 +10,33 @@ const Footer = () => (
           Building exceptional digital experiences with cutting-edge technologies. Let's create something amazing together.
         </p>
         <div className="flex gap-4 text-xl mt-2">
-          <a href="https://github.com/Tida007" target="_blank" rel="noopener noreferrer" className="hover:text-fuchsia-400"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/walter-francis-a24333365/" target="_blank" rel="noopener noreferrer" className="hover:text-fuchsia-400"><FaLinkedin /></a>
-          <a href="mailto:tonytidatmg@gmail.com" className="hover:text-fuchsia-400"><FaEnvelope /></a>
+          <a href="https://github.com/Tida007" target="_blank" rel="noopener noreferrer" className="hover:text-white font-extrabold duration-300"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/walter-francis-a24333365/" target="_blank" rel="noopener noreferrer" className="hover:text-white font-extrabold duration-300"><FaLinkedin /></a>
+          <a href="mailto:tonytidatmg@gmail.com" className="hover:text-white font-extrabold duration-300"><FaEnvelope /></a>
         </div>
       </div>
       {/* Center: Quick Links */}
       <div>
         <h3 className="font-semibold mb-2">Quick Links</h3>
         <ul className="space-y-1 text-sm">
-          <li><a href="#home" className="hover:text-fuchsia-400">Home</a></li>
-          <li><a href="#about" className="hover:text-fuchsia-400">About</a></li>
-          <li><a href="#experience" className="hover:text-fuchsia-400">Experience</a></li>
-          <li><a href="#skills" className="hover:text-fuchsia-400">Skills</a></li>
-          <li><a href="#testimonials" className="hover:text-fuchsia-400">Testimonials</a></li>
-          <li><a href="#projects" className="hover:text-fuchsia-400">Projects</a></li>
-          <li><a href="#contact" className="hover:text-fuchsia-400">Contact</a></li>
+          <li><a href="#home" className=" hover:font-bold hover:text-white duration-300">Home</a></li>
+          <li><a href="#about" className=" hover:font-bold hover:text-white duration-300">About</a></li>
+          <li><a href="#experience" className=" hover:font-bold hover:text-white duration-300">Experience</a></li>
+          <li><a href="#skills" className=" hover:font-bold hover:text-white duration-300">Skills</a></li>
+          <li><a href="#testimonials" className=" hover:font-bold hover:text-white duration-300">Testimonials</a></li>
+          <li><a href="#projects" className=" hover:font-bold hover:text-white duration-300">Projects</a></li>
+          <li><a href="#contact" className=" hover:font-bold hover:text-white duration-300">Contact</a></li>
         </ul>
       </div>
       {/* Right: Services */}
       <div>
         <h3 className="font-semibold mb-2">Services</h3>
         <ul className="space-y-1 text-sm">
-          <li>Full Stack Development</li>
-          <li>Debugging & Troubleshooting</li>
-          <li>API Development & Integration</li>
-          <li>UI/UX Implementation</li>
-          <li>Technical Consulting</li>
+          <li className=" hover:font-bold hover:text-white duration-300">Web Development</li>
+          <li className=" hover:font-bold hover:text-white duration-300">Debugging & Troubleshooting</li>
+          <li className=" hover:font-bold hover:text-white duration-300">API Development & Integration</li>
+          <li className=" hover:font-bold hover:text-white duration-300">UI/UX Implementation</li>
+          <li className=" hover:font-bold hover:text-white duration-300">Technical Consulting</li>
         </ul>
       </div>
     </div>

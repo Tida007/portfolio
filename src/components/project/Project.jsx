@@ -1,13 +1,21 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaCode} from "react-icons/fa";
+import styles from "../project/Project.module.css";
+import { motion } from "framer-motion";
 
 const projects = [
   {
     title: "Manager UI",
-    description: "A front-end application connecting property owners with potential renters.",
-    image: "https://raw.githubusercontent.com/Tida007/manager-ui/refs/heads/main/public/design/desktop-design-dark.jpg", // Replace with your image
+    description: "Browser extension manager UI project shows practice working with dynamic data, filtering data, color theming, building a responsive grid, and more!.",
+    image: "https://raw.githubusercontent.com/Tida007/manager-ui/refs/heads/main/public/design/desktop-design-dark.jpg", 
     link: "https://www.frontendmentor.io/solutions/extension-manager-ui-Gt4JqXTZq1",
     comingSoon: false,
+    live: true,
+    web: true,
+    tech: ["JavaScript", "React", "Tailwind CSS", "Vite", "Node.js"],
+    features: ["Responsive Design", "Dark Mode", "Category Filtering", "Search Functionality"],
     tag: "Front-end",
+    liveDemo: "https://www.frontendmentor.io/solutions/extension-manager-ui-Gt4JqXTZq1",
+    code: "https://github.com/Tida007/manager-ui"
   },
   {
     title: "Clip-board",
@@ -15,58 +23,72 @@ const projects = [
     image: "https://raw.githubusercontent.com/Tida007/clipboard-page/refs/heads/main/design/desktop-preview.jpg",
     link: "https://www.frontendmentor.io/solutions/clipboard-landing-page--WxQ2kpTqw",
     comingSoon: false,
+    live: true,
+    web: true,
+    tech: ["HTML", "CSS", "JavaScript"],
+    features: ["Responsive Design", "Interactive Elements", "Cross-Browser Compatibility"],
     tag: "Landing Page",
+    liveDemo: "https://www.frontendmentor.io/solutions/clipboard-landing-page--WxQ2kpTqw",
+    code: "https:/github.com/Tida007/clipboard-page"
   },
   {
-    title: "Mobile App (Coming Soon)",
-    description: "A mobile-first project coming soon.",
-    image: "https://via.placeholder.com/400x200?text=Coming+Soon",
+    title: "News-Letter Sign-Up",
+    description: "A simple and elegant newsletter sign-up form that captures user emails with basic form structure, validation and submission.",
+    image: "https://raw.githubusercontent.com/Tida007/newsletter-signup/refs/heads/main/assets/images/illustration-sign-up-desktop.svg",
     link: "#",
-    comingSoon: true,
-    tag: "Mobile",
+    comingSoon: false,
+    live: true,
+    web: true,
+    tech: ["HTML", "CSS", "JavaScript"],
+    features: ["Responsive Design", "Form Validation", "Email Capture"],
+    liveDemo: "https://www.frontendmentor.io/solutions/newsletter-sign-up-PAr7IkNiR0",
+    code: "https://github.com/Tida007/newsletter-signup",
+    tag: "Newsletter"
   },
   // Add more projects as needed
 ];
 
-const ProjectGrid = () => (
-  <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-    {projects.map((project, idx) => (
-      <div
-      key={idx}
-      className="bg-zinc-900 rounded-xl overflow-hidden shadow border border-zinc-800 flex flex-col"
-      >
-        <div className="relative">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-48 object-cover"
-            />
-          {project.comingSoon && (
-            <span className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 text-gray-200 text-lg font-semibold">
-              Coming Soon
-            </span>
-          )}
-        </div>
-        <div className="p-6 flex-1 flex flex-col">
-          <h3 className="text-lg font-bold text-gray-100 mb-2">{project.title}</h3>
-          <p className="text-gray-400 text-sm mb-4 flex-1">{project.description}</p>
-          <div className="flex items-center justify-between mt-auto">
-            <span className="inline-block bg-blue-800 text-blue-200 text-xs px-2 py-1 rounded">{project.tag}</span>
-            {!project.comingSoon && (
-              <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-blue-400 hover:underline"
-              >
-                Live Demo <FaExternalLinkAlt size={14} />
-              </a>
-            )}
+function ProjectGrid ()  {
+  return (
+          <div className={styles.projectGrid}>
+      {projects.map((project, idx) => (
+          <motion.div 
+          className={styles.projectCard} 
+          key={idx}
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300}}
+          >
+          <div className={styles.projectImageWrapper}>
+            <img src={project.image} alt={project.title} className={styles.projectImage} />
+            {project.live && <span className={`${styles.badge}`}>Live</span>}
+            {project.web && <span className={styles.badge} style={{top: "2.5rem"}}>Web</span>}
           </div>
-        </div>
-      </div>
-    ))}
-  </div>
-);
+          <div className={styles.projectContent}>
+            <div className={styles.projectTitle}>{project.title}</div>
+            <div className={styles.projectDesc}>{project.description}</div>
+            <div className={styles.techStack}>
+              {project.tech.map((tech, i) => (
+                  <span className={styles.techTag} key={i}>{tech}</span>
+                ))}
+            </div>
+            <ul className={styles.featuresList}>
+              {project.features.map((feature, i) => (
+                  <li key={i}>{feature}</li>
+                ))}
+            </ul>
+            <div className={styles.projectActions}>
+              <a href={project.liveDemo} className={styles.actionBtn} target="_blank" rel="noopener noreferrer">
+                <FaExternalLinkAlt /> Live Demo
+              </a>
+              <a href={project.code} className={`${styles.actionBtn} ${styles.secondary}`} target="_blank" rel="noopener noreferrer">
+                <FaCode /> Code
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  )
+};
 
 export default ProjectGrid;

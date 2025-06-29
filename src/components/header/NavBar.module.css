@@ -1,0 +1,65 @@
+nav{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    padding: 0 12%;
+    background-color: #040608;
+    backdrop-filter: blur(20px);
+    top: 0.5rem;
+    position: fixed;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+nav ul li:hover {
+    color: hsl(270, 12%, 93%); /* Tailwind's violet-500 */
+    cursor: pointer;
+
+}
+
+nav .navBtns {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav .navBtns .social {
+    display: flex;
+    gap: 10px;
+}
+
+nav .social .icon {
+    border: 1px solid #a275f2; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bars {
+    display: none;
+}
+
+@media screen and(max-width: 900px) {
+    .bars {
+        display: flex;
+    }
+
+    nav ul{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        transition: 6s;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 20px 0;
+        padding-left: 12% !important;
+    }
+    
+}

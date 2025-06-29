@@ -1,0 +1,40 @@
+.container {
+    margin-top: 180px;
+    align-items: center;
+}
+
+
+.home_wrapper {
+    padding: 0 12%;
+    min-height: 58vh;
+}
+
+.home_content h5{
+    margin-bottom: 40px;
+}
+
+.home_content h2 {
+    margin-bottom: 30px;
+}
+
+.home_content p{
+    margin-bottom: 15px;
+}
+
+@media  screen and (max-width: 1400px) {
+    .home_wrapper .home_image img{
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media  screen and (max-width: 1200px) {
+    .home_wrapper .home_image img{
+    }
+
+    .home_wrapper .home_content h2 {
+        font-size: 120px;
+        list-style: 130px;
+        font-weight: 800;
+    }
+}
