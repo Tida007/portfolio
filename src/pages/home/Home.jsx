@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "../../components/ui/Button";
-import Homecss from "../home/Home.module.css";
+import Homecss from "./home/Home.module.css";
 import { ArrowRight, Github, Mails, Twitter, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import Switch from "/images/bg-switch.png"
