@@ -11,7 +11,7 @@ import Drop from "/images/drop.png";
 
 function Home() {
   const [text, setText] = useState("");
-  const fullText = "Hello,  I'm a Web Developer";
+  const fullText = "Hey, I'm a Web Developer";
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

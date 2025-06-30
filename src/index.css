@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&: where(.dark, .dark *));
+
 @font-face {
     font-family: "Inter";
     src: url("./assets/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf") format("truetype");
@@ -12,15 +14,16 @@
     src: url("./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
     font-weight: bold;
     font-style: normal;
+    font-size: medium;
 }
 
 /* Apply the font globally */
 body {
     font-family: "Inter",  sans-serif;
-    background-color: black; /* Dark mode background */
-    color: antiquewhite; /* Light text color for better contrast */
-
 }
+
+/* Let Tailwind handle background and text color for light/dark mode */
+/* Remove any default background-color or color here. Use Tailwind classes in your components. */
 
 :root{
     --primary-color: #fdc448;

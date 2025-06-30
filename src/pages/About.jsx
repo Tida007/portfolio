@@ -13,10 +13,10 @@ import Footer from "../components/footer/Footer";
 import { Fade, Slide, AttentionSeeker, Zoom } from "react-awesome-reveal";
 
 const Section = ({ title, description, children, className="" }) => (
-  <div className={`px-8 md:px20 lg:px-36 py-16 text-gray-300 ${className}`}>
-    <h1 className="text-3xl font-bold text-center text-white mb-2">{title}</h1>
+  <div className={`px-8 md:px20 lg:px-36 py-16 bg-white dark:bg-zinc-900 text-black dark:text-white ${className}`}>
+    <h1 className="text-3xl font-bold text-center mb-2 text-black dark:text-white">{title}</h1>
     {description && (
-      <p className="text-center text-gray-400 text-md mb-12 text-sm py-6">
+      <p className="text-center text-md mb-12 text-sm py-6 text-gray-700 dark:text-gray-300">
         {description}
       </p>
     )}
@@ -29,11 +29,17 @@ function About() {
     <>
       {/* Title Section */}
 
+      <Zoom triggerOnce>
+      <Fade cascade duration={3000} damping={0.8}>
+        <AttentionSeeker effect="pulse" duration={1000}>
       <Section
         title="Passionate about creating innovative web applications"
         description="I am a passionate web developer with a strong foundation in JavaScript, React, and Node.js. I thrive on challenges and enjoy turning complex problems into simple, beautiful, and intuitive designs. My goal is to build applications that not only meet user needs but also provide an exceptional user experience."
         className="pt-28"
       />
+        </AttentionSeeker>
+      </Fade>
+      </Zoom>
 
       {/* Skills Section */}
       <Zoom triggerOnce>
@@ -54,7 +60,9 @@ function About() {
       {/* Tools Section */}
       <Zoom triggerOnce>
         <Fade cascade duration={3000} damping={0.8}>
+          <AttentionSeeker effect="pulse" duration={1000}>
           <SkillsSection Portfolio={Section} />
+          </AttentionSeeker>
         </Fade>
       </Zoom>
 
@@ -76,7 +84,7 @@ function About() {
         <div className="flex justify-center items-center mt-6">
           <a
             href=""
-            className="flex items-center px-4 py-2 bg-cyan-950 text-white rounded-full hover:bg-cyan-700 transition duration-300 ease-in-out"
+            className="flex items-center px-4 py-2 bg-cyan-950 text-white dark:bg-cyan-800 dark:text-white rounded-full hover:bg-cyan-700 dark:hover:bg-cyan-900 transition duration-300 ease-in-out"
           >
             <PiGithubLogo className="mr-2 text-xs" />
             View GitHhub Respositories
@@ -101,7 +109,7 @@ function About() {
                   <a
                     href="mailto:tonytidatmg@gmail.com"
                     target="_blank"
-                    className="text-blue-400 hover:underline"
+                    className="text-blue-400 dark:text-blue-300 hover:underline"
                   >
                     tonytidatmg@gmail.com
                   </a>
@@ -118,7 +126,7 @@ function About() {
                     href="https://github.com/Tida007"
                     rel="noopener noreferral"
                     target="#"
-                    className="text-blue-400 hover:underline flex gap-2"
+                    className="text-blue-400 dark:text-blue-300 hover:underline flex gap-2"
                   >
                     View Projects <MdOutlineArrowOutward size={18} />
                   </a>
@@ -135,7 +143,7 @@ function About() {
                     href="https://www.linkedin.com/in/walter-francis-a24333365/"
                     rel="noopener noreferrer"
                     target="#"
-                    className="text-blue-400 hover:underline flex gap-2"
+                    className="text-blue-400 dark:text-blue-300 hover:underline flex gap-2"
                   >
                     View Profile <MdOutlineArrowOutward size={18} />
                   </a>

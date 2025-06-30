@@ -82,20 +82,20 @@ const SkillsSection = ( ) => {
   );
 
   return (
-    <section className={`p-16 px-4 flex flex-col items-center bg-[#4542422a]`}>
+    <section className={`p-16 px-4 flex flex-col items-center bg-[#4542422a] dark:bg-zinc-900 text-black dark:text-white`}>
       {/* Badge */}
-      <span className="block text-base text-center font-normal mb-12">
+      <span className="block text-base text-center font-normal mb-12 text-zinc-500 dark:text-zinc-400">
         My Skills
       </span>
 
       {/* Title */}
-      <h2 className="flex items-center gap-2 md:text-4xl font-bold text-white mb-12">
+      <h2 className="flex items-center gap-2 md:text-4xl font-bold mb-12 text-black dark:text-white">
         <DiKrakenjsBadge className="text-blue-400" size={36} />
         Technical Expertise
       </h2>
 
       {/* Subtitle */}
-      <p className="text-center text-gray-400 max-w-2xl mb-8">
+      <p className="text-center max-w-2xl mb-8 text-gray-700 dark:text-gray-300">
         I've developed a diverse skill set in web development, focusing on frontend technologies. My expertise includes modern JavaScript frameworks, responsive design, and efficient server-side solutions.
       </p>
 
@@ -123,11 +123,11 @@ const SkillsSection = ( ) => {
       placeholder="Search skills..." 
       value={search}
       onChange={(e) => setSearch(e.target.value)}
-      className="mb-8 h-10 w-full text-start max-w-md py-2 rounded-lg bg-zinc-900 text-gray-200 dark:border-zinc-700/50 focus:outline-none focus:border-blue-500 backdrop-blur-sm"
+      className="mb-8 h-10 w-full text-start max-w-md py-2 rounded-lg bg-zinc-900 dark:bg-zinc-800 text-gray-200 dark:text-white dark:border-zinc-700/50 focus:outline-none focus:border-blue-500 backdrop-blur-sm"
       />
 
       {/* Skills Grid */}
-      <div className="grid grid-flow-col sm:grid-cols-3 lg:grid-flow-col gap-6">
+      <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-flow-col gap-6">
         {filteredSkills.map((skill) => (
           <motion.div
           key={skill.name}
@@ -136,10 +136,10 @@ const SkillsSection = ( ) => {
           transition={{ type: "spring", stiffness: 600, }}
           >
             <div key={skill.name} className="flex flex-col items-center">
-              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-zinc-800 mb-2 shadow-lg">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-zinc-800 dark:bg-zinc-700 mb-2 shadow-lg">
                 {skill.icon}
               </div>
-              <span className="text-gray-200 text-xs">{skill.name}</span>
+              <span className="text-xs text-black dark:text-white">{skill.name}</span>
             </div>
           </motion.div>
         ))}
