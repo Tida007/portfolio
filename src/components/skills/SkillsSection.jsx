@@ -26,36 +26,38 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 const skills = [
   {
     name: "Typescript",
-    icon: <SiTypescript size={34} color="skyblue"/>,
+    icon: <SiTypescript size={34} color="#0795c0"/>,
     category: "Frontend",
   },
   {
     name: "JavaScript",
-    icon: <SiJavascript size={34} color="yellow"/>,
+    icon: <SiJavascript size={34} color="#b4ba17"/>,
     category: "Frontend",
   },
   { name: "React", 
-    icon: <SiReact size={34} color="skyblue"/>, 
+    icon: <SiReact size={34} color="#318b95"/>, 
     category: "Frontend",
    },
   {
     name: "Tailwind CSS",
-    icon: <SiTailwindcss size={34} color=""/>,
+    icon: <SiTailwindcss size={34} color="#31957f"/>,
     category: "Frontend",
   },
-  { name: "Node.Js", icon: <SiNodedotjs size={48} color="green"/>, category: "DevOps" },
-  { name: "Next.Js", icon: <SiNextdotjs size={48}color="purple"/>, category: "DevOps" },
-  { name: "GiT", icon: <SiGit size={48} color="#F1502f, #3E2COO"/>, category: "DevOps" },
-  { name: "Vite", icon: <SiVite size={48} />, category: "Tools" },
+  { name: "Node.Js", icon: <SiNodedotjs size={34} color="#084e03"/>, category: "DevOps" },
+  { name: "Next.Js", icon: <SiNextdotjs size={34} color="#000000"/>, category: "DevOps" },
+  { name: "GiT", icon: <SiGit size={34} color="#ba4517"/>, category: "DevOps" },
+  { name: "Vite", icon: <SiVite size={34} color="4e3f03" />, category: "Tools" },
+  { name: "Redux Toolkit", icon: <SiRedux size={34} color="#764abc" />, category: "Tools" },
+  { name: "Docker", icon: <SiDocker size={34} color="#2496ed" />, category: "DevOps" },
   {
     name: "React Router",
-    icon: <SiReactrouter size={48} />,
+    icon: <SiReactrouter size={34} color="#f11924ab" />,
     category: "DevOps",
   },
-  { name: "Material UI", icon: <SiMui size={48} />, category: "Tools" },
+  { name: "Material UI", icon: <SiMui size={34} color="#094249" />, category: "Tools" },
   {
     name: "Vs Code",
-    icon: <TbBrandFramerMotion size={48} />,
+    icon: <TbBrandFramerMotion size={34} color="#b4ba17" />,
     category: "Tools",
   },
 ];
@@ -127,7 +129,7 @@ const SkillsSection = ( ) => {
       />
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-flow-col gap-6">
+      <div className="grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-flow- gap-6">
         {filteredSkills.map((skill) => (
           <motion.div
           key={skill.name}

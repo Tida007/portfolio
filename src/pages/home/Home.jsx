@@ -25,7 +25,8 @@ function Home() {
   }, [index]);
 
   return (
-    <section className={`${Homecss.container} relative`}
+    <section
+      className={`${Homecss.container} relative`}
       style={{
         backgroundImage: `url(${Switch})`,
         backgroundSize: "cover",
@@ -36,11 +37,11 @@ function Home() {
         zIndex: -1,
         minHeight: "83%",
       }}
+    >
+      <div
+        className={`${Homecss.home_wrapper} flex flex-col lg:flex-row items-center justify-between md:items-center `}
       >
-        <div
-        className={`${Homecss.home_wrapper} flex flex-col lg:flex-row md:items-centerv items-center justify-between `}
-      >
-        <div className={`${Homecss.home_content}  `}>
+        <div className={`${Homecss.home_content}`}>
           <div className={`${Homecss.home_box} flex-1 w-full`}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -57,7 +58,7 @@ function Home() {
                 </span>
                 <span className="animate-bounce">|</span>
               </h5>
-              <h2 className="text-7xl font-extrabold w-16">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold w-16">
                 Francis <span className="font-extrabold">Walter</span>
               </h2>
               <p>
@@ -65,7 +66,7 @@ function Home() {
                 design with cutting-edge technology
               </p>
 
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start md:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start md:justify-start w-full">
                 <Button
                   asChild
                   size="lg"
@@ -83,17 +84,27 @@ function Home() {
                 rel="noopener noreferrer">
                 <Github/>
                 </a>
+
+                <a href="https://x.com/bren_diary"
+                target="_blank"
+                rel="noopener noreferrer">
                 <Twitter />
+                </a>
+
+                <a href="https://www.linkedin.com/in/walter-francis-a24333365/"
+                target="_blank"
+                rel="noopener noreferrer">
                 <Linkedin />
+                </a>
                 <Mails />
               </div>
             </motion.div>
           </div>
         </div>
         <div
-          className={`${Homecss.home_image} flex-1 w-96 lg:w-1/2 flex justify-end items-center mt-8 lg:mt-0`}
+          className={`${Homecss.home_image} flex-1 w-full max-w-md md:max-w-lg lg:max-w-xl flex justify-end items-center mt-8 lg:mt-0`}
         >
-          <div className="relative flex items-center justify-center w-[400px] h-[400px]">
+          <div className="relative flex items-center justify-center w-full max-w-xs sm:max-w-md md:max-w-lg h-auto aspect-square">
             {/* Decorative elements */}
             <span
               className="absolute top-[45%] left-[-5%] h-[50px] w-[50px] rounded-full animate-spin"
@@ -106,7 +117,7 @@ function Home() {
             <img
               src={Drop}
               alt="profile image"
-              className="max-w-80 w-full h-auto rounded-full animate-spin"
+              className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto rounded-full animate-spin"
               style={{ border: "2px solid var(--primary-color)", animationDuration: "20s" }}
             />
             <span

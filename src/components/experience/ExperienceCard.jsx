@@ -30,7 +30,7 @@ function ExperienceSection() {
         "My professional journey has equipped me with practical experience and valuable skills in software development."
       }
     >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-36 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12 items-center w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-8 lg:px-20">
         <div>
           <h2 className="text-2xl font-bold  mb-8 flex items-center text-black dark:text-white">
             <FaBriefcase className="text-blue-500 dark:text-blue-400 mr-2" />

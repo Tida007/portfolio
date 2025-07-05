@@ -3,7 +3,7 @@ import { CodeXml, Users, LampDesk, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 
 const SkillCard = ({ icon: Icon, title, description}) => (
-  <div className="flex flex-col items-center  p-6 rounded-lg shadow-2xl drop-shadow-black bg-zinc-950 dark:bg-zinc-800 hover:bg-black/50 dark:hover:bg-zinc-900 transition duration-300 ease-in-out">
+  <div className="flex flex-col items-center w-full max-w-xs p-6 rounded-lg shadow-2xl drop-shadow-black bg-zinc-950 dark:bg-zinc-800 hover:bg-black/50 dark:hover:bg-zinc-900 transition duration-300 ease-in-out">
     <motion.span
     whileHover={{ scale: 1.1 }}
     transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -17,12 +17,12 @@ const SkillCard = ({ icon: Icon, title, description}) => (
 
 function SkillsCard() {
     return (
-        <div className={`bg-[#1b1b1b2a]`}
+        <div className={` bg-[#1b1b1b2a]`}
         >
           <span className="block text-base text-center py-8 text-zinc-500 dark:text-zinc-400">About Me</span>
           <h2 className="text-center font-extrabold text-3xl text-black dark:text-white">Front-end Web Developer & Problem Solver</h2>
           <p className="text-center mt-6 text-sm mb-8 text-zinc-800 dark:text-zinc-200">Passionate about creating efficient, scalable solutions that make a real impact.</p>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  items-center max-w-7xl mx-auto px-8 py-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 items-center w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-8 lg:px-20 py-8 sm:py-12 md:py-16">
         <div className="flex flex-col justify-center">
           <p className="text-md ">My journey as a frontend developer began with a fascination for technology & design. I started learning HTML, CSS and JavaScript & quickly fell in love with the process of turning ideas into reality through code. Over the years, I've honed my skills by working on various projects and continuously seeking new challenges to push my boundaries</p>
           <p className="text-md  mt-10">I'm always eager to learn and stay updated with the latest trends in web development. I believe that a strong foundation in frontend technologies is essential for creating exceptional user experiences, and I'm committed to mastering these skills to deliver high-quality applications.</p>

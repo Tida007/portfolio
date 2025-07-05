@@ -1,8 +1,8 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => (
-  <footer className="bg-zinc-900 text-gray-300 pt-12 pb-6 mt-16 border-t border-zinc-800">
-    <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row md:justify-between gap-12">
+  <footer className="w-full bg-zinc-900 text-gray-300 pt-8 sm:pt-12 pb-6 mt-8 sm:mt-16 border-t border-zinc-800">
+    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-8 lg:px-20 flex flex-col md:flex-row md:justify-between gap-8 sm:gap-12">
       {/* Left: Brand & Social */}
       <div>
         <h2 className="text-xl font-bold text-fuchsia-500 mb-2">Walter Francis</h2>

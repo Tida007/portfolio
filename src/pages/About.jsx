@@ -13,7 +13,7 @@ import Footer from "../components/footer/Footer";
 import { Fade, Slide, AttentionSeeker, Zoom } from "react-awesome-reveal";
 
 const Section = ({ title, description, children, className="" }) => (
-  <div className={`px-8 md:px20 lg:px-36 py-16 bg-white dark:bg-zinc-900 text-black dark:text-white ${className}`}>
+  <div className={`w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-8 lg:px-20 py-8 sm:py-12 md:py-16 bg-white dark:bg-zinc-900 text-black dark:text-white ${className}`}>
     <h1 className="text-3xl font-bold text-center mb-2 text-black dark:text-white">{title}</h1>
     {description && (
       <p className="text-center text-md mb-12 text-sm py-6 text-gray-700 dark:text-gray-300">
