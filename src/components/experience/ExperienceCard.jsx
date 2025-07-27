@@ -77,7 +77,7 @@ function ExperienceSection() {
                 (ESTIN)
               </span>
               <span className="bg-zinc-800 dark:bg-zinc-700 text-gray-400 dark:text-gray-300 text-xs px-2 py-1 rounded">
-                2022 - Present
+                2024 - 2025
               </span>
             </p>
           </div>
