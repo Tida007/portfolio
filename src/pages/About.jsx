@@ -83,7 +83,7 @@ function About() {
       <Section>
         <div className="flex justify-center items-center mt-6">
           <a
-            href=""
+            href="https://github.com/Tida007"
             className="flex items-center px-4 py-2 bg-cyan-950 text-white dark:bg-cyan-800 dark:text-white rounded-full hover:bg-cyan-700 dark:hover:bg-cyan-900 transition duration-300 ease-in-out"
           >
             <PiGithubLogo className="mr-2 text-xs" />
